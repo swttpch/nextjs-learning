@@ -15,6 +15,9 @@ export default function NavBar() {
             <li>
                 <Link href="/sales"><>Sales</></Link>
             </li>
+            <li>
+                <Link href="/todos"><>Todos</></Link>
+            </li>
         </ul>
     )
 }
