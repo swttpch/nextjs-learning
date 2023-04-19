@@ -12,6 +12,9 @@ export default function NavBar() {
             <li>
                 <Link href="/about"><>Sobre</></Link>
             </li>
+            <li>
+                <Link href="/sales"><>Sales</></Link>
+            </li>
         </ul>
     )
 }
