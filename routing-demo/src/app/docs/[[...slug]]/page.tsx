@@ -1,5 +1,5 @@
 function Page({ params }: { params: { slug: string[] } }) {
-  if (params.slug.length === 2) {
+  if (params.slug?.length === 2) {
     return (
       <>
         <h1>
@@ -7,7 +7,7 @@ function Page({ params }: { params: { slug: string[] } }) {
         </h1>
       </>
     )
-  } else if (params.slug.length === 1) {
+  } else if (params.slug?.length === 1) {
     return (
       <>
         <h1>Details for feature {params.slug[0]}</h1>
