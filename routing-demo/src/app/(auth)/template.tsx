@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useParams, usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 const navItem = [
   {
@@ -23,11 +24,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [input, setInput] = useState('')
   const pathname = usePathname()
 
   return (
     <>
       <div>
+        <div>
+          <input
+            placeholder="Search"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </div>
         {navItem.map((item) => {
           const isActive = pathname.startsWith(item.href)
           return (
